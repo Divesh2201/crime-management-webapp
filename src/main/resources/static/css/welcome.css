@@ -1,14 +1,275 @@
-.navbar{
-    display:flex;
-    justify-content:space-between;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.nav-item{
-    margin:15px;
+body {
+    font-family: Verdana, sans-serif;
+    line-height: 1.5;
 }
 
-div.container-1{
-    padding:30px;
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+
+
+
+/**************************************************************************************
+***********************************HELPER CLASSES**************************************
+**************************************************************************************/
+
+
+
+
+p {
+    margin: .75rem 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.p-40 {
+    padding: 40px;
+}
+
+.p-50 {
+    padding: 50px;
+}
+
+.p-t-0 {
+    padding-top: 0;
+}
+
+.p-l-r-20 {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.p-t-10 {
+    padding-top: 10px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.m-30 {
+    margin: 30px;
+}
+
+.m-40 {
+    margin: 40px;
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+.m-t-0 {
+    margin-top: 0;
+}
+
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-t-30 {
+    margin-top: 30px;
+}
+
+
+.m-r-5 {
+    margin-right: 5px;
+}
+
+.m-r-10 {
+    margin-right: 10px;
+}
+
+.m-r-20 {
+    margin-right: 20px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
+}
+
+.m-b-40 {
+    margin-bottom: 40px;
+}
+
+.section.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+
+
+
+/*NAVBAR*/
+
+
+
+.navbar {
+    background: #fff;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    font-size: .9375rem;
+}
+
+.logo a {
+    color: #333;
+    padding: .75rem;
+    margin: 0 .25rem;
+    transition: background .3s;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: #333;
+    padding: .75rem;
+    margin: 0 .25rem;
+    transition: background .3s;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+
+.logo a:hover,
+.navbar ul li a:hover {
+    color: #333;
+    background: #ccc;
+}
+
+
+
+
+/*SHOWCASE*/
+
+
+.showcase {
+    background: url('https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/04/06/668813-mumbai-police-02.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*SECTION*/
+
+
+
+
+.section {
+    padding: 60px 0;
+}
+
+.section-white {
+    background: #fff;
+    color: #333;
+}
+
+.section .section-heading h3 {
+    border-bottom: solid 1px #f1f1f1;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0;
+}
+
+
+
+/*SERVICES*/
+
+
+div.container-1 {
+    padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 250px 250px;
@@ -16,7 +277,7 @@ div.container-1{
     margin: 0 50px 0 50px;
 }
 
-div.container-1 p.grid-item{
+div.container-1 p.grid-item {
     display: block;
     text-align: center;
     background-color: #151E3F;
@@ -26,20 +287,164 @@ div.container-1 p.grid-item{
     font-weight: 800;
 }
 
-.container-1 .a{
-    background:url("https://www.jmcdowelllaw.com/wp-content/uploads/2018/12/obtain-criminal-record-1184x620.jpg") center/cover no-repeat; 
+.container-1 .a {
+    background: url("https://www.jmcdowelllaw.com/wp-content/uploads/2018/12/obtain-criminal-record-1184x620.jpg") center/cover no-repeat;
 }
-.container-1 .b{
-    background:url("https://www.klcc.org/sites/klcc/files/201704/publicrecords.jpg") center no-repeat;    
+
+.container-1 .b {
+    background: url("https://www.klcc.org/sites/klcc/files/201704/publicrecords.jpg") center no-repeat;
 }
-.container-1 .c{
-    background:url("https://blog.ipleaders.in/wp-content/uploads/2017/12/BV-Acharya.png") center/cover no-repeat; }
-.container-1 .d{
-    background:url("https://pix10.agoda.net/hotelImages/159/159095/159095_14060310040019675275.jpg?s=1200x800") center/cover no-repeat; 
+
+.container-1 .c {
+    background: url("https://blog.ipleaders.in/wp-content/uploads/2017/12/BV-Acharya.png") center/cover no-repeat;
 }
-.container-1 .e{
-    background:url("data:image/png;base64,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") center/cover no-repeat; 
+
+.container-1 .d {
+    background: url("https://tobygutierrez.files.wordpress.com/2017/05/file_search.jpg?w=597") center/cover no-repeat;
 }
-.container-1 .f{
-    background:url("https://c0.wallpaperflare.com/preview/187/945/117/black-and-red-laptop-keyboard.jpg") center/cover no-repeat; 
+
+.container-1 .e {
+    background: url("https://gunstocarry.com/wp-content/uploads/2017/12/gun-ban-small.png") center/cover no-repeat;
+}
+
+.container-1 .f {
+    background: url("https://us.123rf.com/450wm/sodis/sodis1801/sodis180100034/92949307-thief-steals-cars-insurance-flat-design-vector-illustration-.jpg?ver=6") center/cover no-repeat;
+}
+
+
+
+/*ABOUT*/
+
+
+
+.para {
+    font-size: .9375rem;
+    margin-bottom: 2.8rem;
+}
+
+.card {
+    flex: 0 1 24%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-text h3 {
+    margin: .6rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.card-text .fade {
+    color: gray;
+}
+
+.card-text:nth-child(2) {
+    font-size: .9375rem;
+}
+
+.card-text .btn {
+    display: block;
+    width: 100%;
+    padding: .6rem;
+}
+
+
+
+/*CONTACT*/
+
+
+
+form input {
+    display: block;
+    width: 100%;
+    padding: .6rem;
+    margin: .6rem 0;
+    border: 1px solid #ccc;
+    font-size: .9375rem;
+}
+
+
+
+/*BUTTON AND LINK*/
+
+
+.btn {
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.btn-light {
+    background: #eee;
+}
+
+.btn-light:hover {
+    cursor: pointer;
+    background: #ccc;
+}
+
+.btn-dark {
+    background: black;
+    color: #fff;
+}
+
+.btn-blue {
+    background: #151E3F;
+    color: #fff;
+    border-radius: 9px;
+}
+
+.btn-dark:hover {
+    cursor: pointer;
+    color: #333;
+    background: #ccc;
+}
+
+
+.btn-blue:hover {
+    cursor: pointer;
+    color: black;
+    background: #ccc;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+/*MAP*/
+
+
+
+.map {
+    width: 100%;
+}
+
+
+
+/*FOOTER*/
+
+
+
+
+footer {
+    padding: 2.5rem 0;
+}
+
+.black {
+    background: #000;
+    color: #fff;
+}
+
+
+footer p {
+    margin: 0;
+    font-size: .9375rem;
+    word-spacing: 250px;
+
+
+
 }

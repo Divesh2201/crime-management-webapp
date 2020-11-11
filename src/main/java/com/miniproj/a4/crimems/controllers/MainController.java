@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.miniproj.a4.crimems.entity.Criminal;
-import com.miniproj.a4.crimems.entity.CriminalRepository;
 import com.miniproj.a4.crimems.entity.Missing;
-import com.miniproj.a4.crimems.entity.MissingRepository;
+import com.miniproj.a4.crimems.repository.CriminalRepository;
+import com.miniproj.a4.crimems.repository.MissingRepository;
 @Controller
-public class WelcomeController {  
+public class MainController {  
 	
 	@Autowired
 	private CriminalRepository criminalRepository;
