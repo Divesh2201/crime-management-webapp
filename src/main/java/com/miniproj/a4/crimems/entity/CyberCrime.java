@@ -1,4 +1,5 @@
 package com.miniproj.a4.crimems.entity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,11 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name = "missing")
-public class Missing {
-
+@Table(name = "cybercrime")
+public class CyberCrime {
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +21,9 @@ public class Missing {
 	@Column(name = "last_name")
 	private String last_name;
 	
-	@Column(name = "age")
-	private int age;
-	
+	@Column(name="Account_number")
+	private String account_number;
+		
 	@Column(name = "Date_of_Incident")
 	private String date;
 
@@ -58,12 +57,12 @@ public class Missing {
 		this.last_name = last_name;
 	}
 
-	public int getAge() {
-		return age;
+	public String getAccount_number() {
+		return account_number;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setAccount_number(String account_number) {
+		this.account_number = account_number;
 	}
 
 	public String getDate() {
@@ -92,13 +91,14 @@ public class Missing {
 
 	@Override
 	public String toString() {
-		return "Missing [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", age=" + age
-				+ ", date=" + date + ", time=" + time + ", desc=" + desc + "]";
+		return "CyberCrime [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", account_number="
+				+ account_number + ", date=" + date + ", time=" + time + ", desc=" + desc + "]";
 	}
-	
 
 
 	
-	
-}
+	}
 
+	
+	
+	

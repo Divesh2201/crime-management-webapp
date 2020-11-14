@@ -1,4 +1,5 @@
 package com.miniproj.a4.crimems.entity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,9 +9,8 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "missing")
-public class Missing {
-
+@Table(name = "extortion")
+public class Extortion {
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,11 @@ public class Missing {
 	@Column(name = "last_name")
 	private String last_name;
 	
-	@Column(name = "age")
+	@Column(name ="Age")
 	private int age;
+	
+	@Column(name="Amount")
+	private int amt;
 	
 	@Column(name = "Date_of_Incident")
 	private String date;
@@ -66,6 +69,14 @@ public class Missing {
 		this.age = age;
 	}
 
+	public int getAmt() {
+		return amt;
+	}
+
+	public void setAmt(int amt) {
+		this.amt = amt;
+	}
+
 	public String getDate() {
 		return date;
 	}
@@ -92,13 +103,10 @@ public class Missing {
 
 	@Override
 	public String toString() {
-		return "Missing [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", age=" + age
-				+ ", date=" + date + ", time=" + time + ", desc=" + desc + "]";
+		return "Extortion [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", age=" + age
+				+ ", amt=" + amt + ", date=" + date + ", time=" + time + ", desc=" + desc + "]";
 	}
 	
-
-
 	
-	
+
 }
-
