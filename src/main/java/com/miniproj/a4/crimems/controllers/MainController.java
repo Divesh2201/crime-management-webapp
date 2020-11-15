@@ -1,6 +1,9 @@
 package com.miniproj.a4.crimems.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,123 +21,116 @@ import com.miniproj.a4.crimems.repository.MissingRepository;
 import com.miniproj.a4.crimems.repository.RobberyRepository;
 @Controller
 public class MainController {  
-	
- 
     @Autowired
-	private MissingRepository missingRepository;
-    
-    @RequestMapping("/welcome")
-    public String loginMessage(){
-        return "welcome";
-    }
-    
-    @PostMapping(path="/missingReport") // Map ONLY POST Requests
-    public @ResponseBody String addNewUser (@RequestParam String first_name
-        , @RequestParam String last_name,  @RequestParam int age , @RequestParam String date , 
-        	@RequestParam String time , @RequestParam String desc) {
-      // @ResponseBody means the returned String is the response, not a view name
-      // @RequestParam means it is a parameter from the GET or POST request
-
-      Missing missing = new Missing();
-      missing.setFirst_name(first_name);
-      missing.setLast_name(last_name);
-      missing.setAge(age);
-      missing.setDate(date);
-      missing.setTime(time);
-      missing.setDesc(desc);
-      missingRepository.save(missing);
-      return "Saved";
-    }
-   
-
-    @Autowired
-    private FelonyRepository felonyRepository;
-    
-    @PostMapping(path="/felonyReport") // Map ONLY POST Requests
-    public @ResponseBody String addNewUser(@RequestParam String first_name
-        , @RequestParam String last_name,  @RequestParam int age ,@RequestParam String felony_committed, @RequestParam String date , 
-        	@RequestParam String time , @RequestParam String desc) {
-      // @ResponseBody means the returned String is the response, not a view name
-      // @RequestParam means it is a parameter from the GET or POST request
-
-      Felony felony = new Felony();
-      felony.setFirst_name(first_name);
-      felony.setLast_name(last_name);
-      felony.setAge(age);
-      felony.setFelony_committed(felony_committed);
-      felony.setDate(date);
-      felony.setTime(time);
-      felony.setDesc(desc);
-      felonyRepository.save(felony);
-      return "Saved";
-    }
-    
+	private CyberCrimeRepository cyberCrimeRepository;
     @Autowired
     private ExtortionRepository extortionRepository;
-    
-    @PostMapping(path="/extortionReport") // Map ONLY POST Requests
-    public @ResponseBody String addNewUser(@RequestParam String first_name
-        , @RequestParam String last_name,  @RequestParam int age ,@RequestParam int amt,
-        @RequestParam String date , 
-        	@RequestParam String time , @RequestParam String desc) {
-      // @ResponseBody means the returned String is the response, not a view name
-      // @RequestParam means it is a parameter from the GET or POST request
-
-      Extortion extortion = new Extortion();
-      extortion.setFirst_name(first_name);
-      extortion.setLast_name(last_name);
-      extortion.setAge(age);
-      extortion.setAmt(amt);
-      extortion.setDate(date);
-      extortion.setTime(time);
-      extortion.setDesc(desc);
-      extortionRepository.save(extortion);
-      return "Saved";
-    }
-    
+    @Autowired
+    private FelonyRepository felonyRepository;
+    @Autowired
+	private MissingRepository missingRepository;
     @Autowired
     private RobberyRepository robberyRepository;
     
-    @PostMapping(path="/robberyReport") // Map ONLY POST Requests
-    public @ResponseBody String addNewUser(@RequestParam String first_name
-        , @RequestParam String last_name,  @RequestParam int age , @RequestParam String date , 
-        	@RequestParam String time ,@RequestParam int amt, @RequestParam String desc) {
-      // @ResponseBody means the returned String is the response, not a view name
-      // @RequestParam means it is a parameter from the GET or POST request
-
-      Robbery robbery = new Robbery();
-      robbery.setFirst_name(first_name);
-      robbery.setLast_name(last_name);
-      robbery.setAge(age);
-      robbery.setDate(date);
-      robbery.setTime(time);
-      robbery.setAmt(amt);
-      robbery.setDesc(desc);
-      robberyRepository.save(robbery);
-      return "Saved";
+	    
+    // home page
+    @RequestMapping("/home")
+    public String loginMessage(){
+        return "home";
     }
     
-    @Autowired
-	 private CyberCrimeRepository cyberCrimeRepository;
-	    
-	    @PostMapping(path="/cyberCrimeReport") // Map ONLY POST Requests
-	    public @ResponseBody String addNewUser1(@RequestParam String first_name
-	        , @RequestParam String last_name,  @RequestParam String account_number,
-	        @RequestParam String date , @RequestParam String time , @RequestParam String desc) {
-	      // @ResponseBody means the returned String is the response, not a view name
-	      // @RequestParam means it is a parameter from the GET or POST request
-	
-	      CyberCrime cyberCrime = new CyberCrime();
-	      cyberCrime.setFirst_name(first_name);
-	      cyberCrime.setLast_name(last_name);
-	      cyberCrime.setAccount_number(account_number);
-	      cyberCrime.setDate(date);
-	      cyberCrime.setTime(time);
-	      cyberCrime.setDesc(desc);
-	      cyberCrimeRepository.save(cyberCrime);
-	      return "Saved";
-	    }
     
-   
-  
+    @GetMapping("/reportCyberCrimeComplaint")
+	public String reportCyberCrimeComplaint(Model theModel) {
+		
+		CyberCrime cyberCrime = new CyberCrime();
+		
+		theModel.addAttribute("cyberCrime", cyberCrime);
+		
+		return "Report_c";
+	}
+    
+    @PostMapping("/saveCyberCrime")
+	public String saveCyberCrime(@ModelAttribute("cyberCrime") CyberCrime cyberCrime) {
+		
+		cyberCrimeRepository.save(cyberCrime);
+		
+		return "redirect:/home";
+	}
+    
+
+    @GetMapping("/reportExtortionComplaint")
+	public String reportExtortionComplaint(Model theModel) {
+		
+		Extortion extortion = new Extortion();
+		
+		theModel.addAttribute("extortion", extortion);
+		
+		return "Report_c";
+	}
+    
+    @PostMapping("/saveExtortion")
+	public String saveExtortion(@ModelAttribute("extortion") Extortion extortion) {
+		
+		extortionRepository.save(extortion);
+		
+		return "redirect:/home";
+	}
+
+    
+    @GetMapping("/reportFelonyComplaint")
+	public String reportFelonyComplaint(Model theModel) {
+		
+		Felony felony = new Felony();
+		
+		theModel.addAttribute("felony", felony);
+		
+		return "Report_c";
+	}
+    
+    @PostMapping("/saveFelony")
+	public String saveFelony(@ModelAttribute("felony") Felony felony) {
+		
+		felonyRepository.save(felony);
+		
+		return "redirect:/home";
+	}
+
+    
+    @GetMapping("/reportMissingComplaint")
+	public String reportMissingComplaint(Model theModel) {
+		
+		Missing missing = new Missing();
+		
+		theModel.addAttribute("missing", missing);
+		
+		return "Report_c";
+	}
+    
+    @PostMapping("/saveMissing")
+	public String saveMissing(@ModelAttribute("missing") Missing missing) {
+		
+		missingRepository.save(missing);
+		
+		return "redirect:/home";
+	}
+    
+    
+    @GetMapping("/reportRobberyComplaint")
+	public String reportRobberyComplaint(Model theModel) {
+		
+		Robbery robbery = new Robbery();
+		
+		theModel.addAttribute("robbery", robbery);
+		
+		return "Report_c";
+	}
+    
+    @PostMapping("/saveRobbery")
+	public String saveRobbery(@ModelAttribute("robbery") Robbery robbery) {
+		
+		robberyRepository.save(robbery);
+		
+		return "redirect:/home";
+	}
 }

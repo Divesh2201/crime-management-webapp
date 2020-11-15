@@ -1,8 +1,11 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+
 <html>
 
 
 <head>
-    <title>Welcome</title>
+    <title>File Cyber Crime Complaint</title>
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="welcome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,20 +19,26 @@
     <div class="section section-white" id="Contact">
         <div class="container">
             <div class="section-heading">
-                <h3 align="center" style="font-size:40px"><b><u>Criminal Record</u></b></h3><br>
+                <h3 align="center" style="font-size:40px"><b><u>CyberCrime Record</u></b></h3><br>
             </div>
             <div class="para">Fill in all the details precisely.<br>We appreciate your co-operation.</div>
-            <form action="">
-                <input type="text" placeholder="First name">
-                <input type="text" placeholder="Last name">
-                <input type="email" placeholder="Date of Birth">
-                <input type="text" placeholder="Crime Committed">
-                <input type="text" placeholder="Prison Term">
-                <button class="btn btn-dark text-center m-t-20">File Report</button>
-            </form>
+            <form:form action="saveCyberCrime" modelAttribute="cyberCrime" method="post">
+            <form:hidden path="id" />
+                <form:input type="text" placeholder="First name" path="first_name"/>
+                <form:input type="text" placeholder="Last name" path="last_name"/>
+                <form:input type="text" placeholder="Account Number" path="account_number"/>
+                <form:input type="text" placeholder="Date of Incident" path="date"/>
+                <form:input type="text" placeholder="Time of Incident" path="time"/>
+                <form:input type="text" placeholder="Description" path="desc"/>
+                <input type="submit" value="Save" />
+            </form:form>
             <br><br>
             <div class="para">Thankyou for your information, we will soon take some action.</div>
+             <p>
+			<a href="${pageContext.request.contextPath}/home">Back to Home</a>
+		</p>
         </div>
     </div>
+   
 
 </body>

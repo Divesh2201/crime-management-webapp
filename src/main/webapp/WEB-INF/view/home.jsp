@@ -96,7 +96,7 @@
         </div>
         <div class="container-1">
             <div class="a">
-                <p class="grid-item"><a href="Report_c.jsp" target="_blank">Add a Criminal Record</a></p>
+                <p class="grid-item"><a href="/reportCyberCrimeComplaint" target="_blank">Add a Criminal Record</a></p>
             </div>
             <div class="b">
                 <p class="grid-item">View all the Criminal Records</p>
