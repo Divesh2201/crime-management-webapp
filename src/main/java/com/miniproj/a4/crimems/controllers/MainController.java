@@ -66,7 +66,7 @@ public class MainController {
 		
 		theModel.addAttribute("extortion", extortion);
 		
-		return "Report_c";
+		return "Report_e";
 	}
     
     @PostMapping("/saveExtortion")
@@ -85,7 +85,7 @@ public class MainController {
 		
 		theModel.addAttribute("felony", felony);
 		
-		return "Report_c";
+		return "Report_f";
 	}
     
     @PostMapping("/saveFelony")
@@ -104,7 +104,7 @@ public class MainController {
 		
 		theModel.addAttribute("missing", missing);
 		
-		return "Report_c";
+		return "Report_m";
 	}
     
     @PostMapping("/saveMissing")
@@ -123,7 +123,7 @@ public class MainController {
 		
 		theModel.addAttribute("robbery", robbery);
 		
-		return "Report_c";
+		return "Report_r";
 	}
     
     @PostMapping("/saveRobbery")
