@@ -22,7 +22,7 @@ public class Robbery {
 	private String last_name;
 	
 	@Column(name ="Age")
-	private int age;
+	private String age;
 	
 	@Column(name ="Date_of_incident")
 	private String date;
@@ -31,7 +31,7 @@ public class Robbery {
 	private String time;
 	
 	@Column(name ="Amount_Robbed")
-	private int amt;
+	private String amt;
 	
 	@Column(name = "Description")
 	private String desc;
@@ -60,11 +60,11 @@ public class Robbery {
 		this.last_name = last_name;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
@@ -84,11 +84,11 @@ public class Robbery {
 		this.time = time;
 	}
 
-	public int getAmt() {
+	public String getAmt() {
 		return amt;
 	}
 
-	public void setAmt(int amt) {
+	public void setAmt(String amt) {
 		this.amt = amt;
 	}
 

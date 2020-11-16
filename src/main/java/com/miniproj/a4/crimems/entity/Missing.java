@@ -23,7 +23,7 @@ public class Missing {
 	private String last_name;
 	
 	@Column(name = "age")
-	private int age;
+	private String age;
 	
 	@Column(name = "Date_of_Incident")
 	private String date;
@@ -58,11 +58,11 @@ public class Missing {
 		this.last_name = last_name;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 

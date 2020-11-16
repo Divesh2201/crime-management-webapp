@@ -23,10 +23,10 @@ public class Extortion {
 	private String last_name;
 	
 	@Column(name ="Age")
-	private int age;
+	private String age;
 	
 	@Column(name="Amount")
-	private int amt;
+	private String amt;
 	
 	@Column(name = "Date_of_Incident")
 	private String date;
@@ -61,19 +61,19 @@ public class Extortion {
 		this.last_name = last_name;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
-	public int getAmt() {
+	public String getAmt() {
 		return amt;
 	}
 
-	public void setAmt(int amt) {
+	public void setAmt(String amt) {
 		this.amt = amt;
 	}
 

@@ -28,8 +28,8 @@
                 <form:input type="text" placeholder="Last name" path="last_name"/>
                 <form:input type="text" placeholder="Age" path="age"/>
                 <form:input type="text" placeholder="Felony_Committed" path="felony_committed"/>
-                <form:input type="text" placeholder="Date of Incident" path="date"/>
-                <form:input type="text" placeholder="Time of Incident" path="time"/>
+                <form:input type="date" placeholder="Date of Incident" path="date"/>
+                <form:input type="time" placeholder="Time of Incident" path="time"/>
                 <form:input type="text" placeholder="Description" path="desc"/>
                 <input type="submit" value="File Report" />
             </form:form>

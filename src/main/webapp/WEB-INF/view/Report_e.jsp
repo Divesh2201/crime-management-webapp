@@ -26,10 +26,10 @@
             <form:hidden path="id" />
                 <form:input type="text" placeholder="First name" path="first_name"/>
                 <form:input type="text" placeholder="Last name" path="last_name"/>
-                <form:input type="text" placeholder="age" path="age"/>
-                <form:input type="text" placeholder="amount" path="amt"/>
-                <form:input type="text" placeholder="Date of Incident" path="date"/>
-                <form:input type="text" placeholder="Time of Incident" path="time"/>
+                <form:input type="text" placeholder="Age" path="age"/>
+                <form:input type="text" placeholder="Amount" path="amt"/>
+                <form:input type="date" placeholder="Date of Incident" path="date"/>
+                <form:input type="time" placeholder="Time of Incident" path="time"/>
                 <form:input type="text" placeholder="Description" path="desc"/>
                 <input type="submit" value="File Report" />
             </form:form>

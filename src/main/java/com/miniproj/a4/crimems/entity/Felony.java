@@ -22,7 +22,7 @@ public class Felony {
 	private String last_name;
 	
 	@Column(name ="Age")
-	private int age;
+	private String age;
 	
 	@Column(name="Felony_Committed")
 	private String felony_committed;
@@ -60,11 +60,11 @@ public class Felony {
 		this.last_name = last_name;
 	}
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 
