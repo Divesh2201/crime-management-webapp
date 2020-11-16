@@ -1,32 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Verdana, sans-serif;
-    line-height: 1.5;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
-    max-width: 1070px;
-    margin: 0 auto;
-}
-
-
-
-
-/**************************************************************************************
-***********************************HELPER CLASSES**************************************
-**************************************************************************************/
-
-
-
 
 p {
     margin: .75rem 0;
@@ -288,30 +259,28 @@ div.container-1 p.grid-item {
 }
 
 .container-1 .a {
-    background: url("https://www.jmcdowelllaw.com/wp-content/uploads/2018/12/obtain-criminal-record-1184x620.jpg") center/cover no-repeat;
+    background: url("https://www.societybyte.swiss/wp-content/uploads/2018/01/iStock-614978872_ret-1170x780.jpg") center/cover no-repeat;
 }
 
 .container-1 .b {
-    background: url("https://www.klcc.org/sites/klcc/files/201704/publicrecords.jpg") center no-repeat;
+    background: url("https://www.silicon.co.uk/wp-content/uploads/2013/07/extortion-Shutterstock-poosan.jpg") center no-repeat;
 }
 
 .container-1 .c {
-    background: url("https://blog.ipleaders.in/wp-content/uploads/2017/12/BV-Acharya.png") center/cover no-repeat;
+    background: url("http://images.catchnews.com/upload/2018/08/03/Delhi-Murder_198535_730x419-m.jpg") center/cover no-repeat;
 }
 
 .container-1 .d {
-    background: url("https://tobygutierrez.files.wordpress.com/2017/05/file_search.jpg?w=597") center/cover no-repeat;
+    background: url("https://blog.ipleaders.in/wp-content/uploads/2017/12/BV-Acharya.png") center/cover no-repeat;
 }
 
 .container-1 .e {
-    background: url("https://gunstocarry.com/wp-content/uploads/2017/12/gun-ban-small.png") center/cover no-repeat;
+    background: url("https://resize.indiatvnews.com/en/resize/oldbucket/715_-/mainnational/IndiaTv6c77d5_thief.jpg") center/cover no-repeat;
 }
 
 .container-1 .f {
-    background: url("https://us.123rf.com/450wm/sodis/sodis1801/sodis180100034/92949307-thief-steals-cars-insurance-flat-design-vector-illustration-.jpg?ver=6") center/cover no-repeat;
+    background: url("https://tobygutierrez.files.wordpress.com/2017/05/file_search.jpg?w=597") center/cover no-repeat;
 }
-
-
 
 /*ABOUT*/
 

@@ -5,9 +5,9 @@
 
 
 <head>
-    <title>File Cyber Crime Complaint</title>
+    <title>File Cyber Crime Complain</title>
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href="welcome.css" rel="stylesheet">
+    <link href="css/welcome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -30,7 +30,7 @@
                 <form:input type="text" placeholder="Date of Incident" path="date"/>
                 <form:input type="text" placeholder="Time of Incident" path="time"/>
                 <form:input type="text" placeholder="Description" path="desc"/>
-                <input type="submit" value="Save" />
+                <input type="submit" value="File Report" />
             </form:form>
             <br><br>
             <div class="para">Thankyou for your information, we will soon take some action.</div>
