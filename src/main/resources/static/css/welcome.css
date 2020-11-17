@@ -358,6 +358,8 @@ form input {
 .btn-dark {
     background: black;
     color: #fff;
+    margin-right: 16px;
+   
 }
 
 .btn-blue {

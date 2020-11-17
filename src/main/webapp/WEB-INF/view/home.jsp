@@ -31,8 +31,8 @@
         </ul>
 
         <form class="form-inline">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-success" type="submit">Search</button>
+            <button class="btn btn-dark btn-success">Register</button>
+            <button class="btn btn-dark btn-success">Sign In</button>
         </form>
 
     </nav>
@@ -96,19 +96,19 @@
         </div>
         <div class="container-1">
             <div class="a">
-                <p class="grid-item"><a href="/reportCyberCrimeComplaint" target="_blank">File a Cyber-Crime complain</a></p>
+                <p class="grid-item"><a href="/reportCyberCrimeComplaint">File a Cyber-Crime complain</a></p>
             </div>
             <div class="b">
-                <p class="grid-item"><a href="/reportExtortionComplaint" target="_blank">File a Extortion complain</a></p>
+                <p class="grid-item"><a href="/reportExtortionComplaint">File a Extortion complain</a></p>
             </div>
             <div class="c">
-                <p class="grid-item"><a href="/reportFelonyComplaint" target="_blank">File a Felony complain</a></p>
+                <p class="grid-item"><a href="/reportFelonyComplaint">File a Felony complain</a></p>
             </div>
             <div class="d">
-                <p class="grid-item"><a href="/reportMissingComplaint" target="_blank">File a Missing complain</a></p>
+                <p class="grid-item"><a href="/reportMissingComplaint">File a Missing complain</a></p>
             </div>
             <div class="e">
-                <p class="grid-item"><a href="/reportRobberyComplaint" target="_blank">File a Robbery complain</a></p>
+                <p class="grid-item"><a href="/reportRobberyComplaint">File a Robbery complain</a></p>
             </div>
             <div class="f">
                 <p class="grid-item">View Complains</p>

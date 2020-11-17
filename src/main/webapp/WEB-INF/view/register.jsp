@@ -97,9 +97,6 @@ button:hover {
     <label for="psw"><b>Password</b></label>
     <form:input type="password" placeholder="Enter Password" name="psw"  path="password"/>
     
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <form:input type="password" placeholder="Repeat Password" name="psw-repeat"/>
-    
       <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
       <button type="submit" class="signupbtn">Sign Up</button>
