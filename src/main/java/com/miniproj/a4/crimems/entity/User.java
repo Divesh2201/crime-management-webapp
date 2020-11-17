@@ -21,6 +21,39 @@ public class User {
 	@Column(name = "password")
 	private String password;
 
+	@Column(name="address")
+	private String address;
+	
+	@Column(name="contact_number")
+	private String contact_number;
+	
+	@Column(name="email")
+	private String email;
+	
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getContact_number() {
+		return contact_number;
+	}
+
+	public void setContact_number(String contact_number) {
+		this.contact_number = contact_number;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public int getId() {
 		return id;
 	}

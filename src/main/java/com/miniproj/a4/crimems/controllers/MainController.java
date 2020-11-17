@@ -14,11 +14,13 @@ import com.miniproj.a4.crimems.entity.Extortion;
 import com.miniproj.a4.crimems.entity.Felony;
 import com.miniproj.a4.crimems.entity.Missing;
 import com.miniproj.a4.crimems.entity.Robbery;
+import com.miniproj.a4.crimems.entity.User;
 import com.miniproj.a4.crimems.repository.CyberCrimeRepository;
 import com.miniproj.a4.crimems.repository.ExtortionRepository;
 import com.miniproj.a4.crimems.repository.FelonyRepository;
 import com.miniproj.a4.crimems.repository.MissingRepository;
 import com.miniproj.a4.crimems.repository.RobberyRepository;
+import com.miniproj.a4.crimems.repository.UserRepository;
 @Controller
 public class MainController {  
     @Autowired
@@ -31,13 +33,32 @@ public class MainController {
 	private MissingRepository missingRepository;
     @Autowired
     private RobberyRepository robberyRepository;
-    
+    @Autowired
+    private UserRepository userRepository;
 	    
     // home page
     @RequestMapping("/home")
     public String loginMessage(){
         return "home";
     }
+    
+    @GetMapping("/register")
+	public String register(Model theModel) {
+		
+		User user = new User();
+		
+		theModel.addAttribute("user", user);
+		
+		return "register";
+	}
+    
+    @PostMapping("/saveUser")
+	public String saveUser(@ModelAttribute("user") User user) {
+		
+		userRepository.save(user);
+		
+		return "redirect:/home";
+	}
     
     
     @GetMapping("/reportCyberCrimeComplaint")
