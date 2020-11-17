@@ -44,8 +44,19 @@ button:hover {
 
 /* Extra styles for the cancel button */
 .cancelbtn {
-  padding: 14px 20px;
+  padding: 14px 10px;
   background-color: #f44336;
+  font-size:15px;
+  color:white;
+  font-weight:bold;
+}
+
+.signupbtn{
+  padding:14px 20px;
+  background-color:#5cb85c;
+  font-size:15px;
+  color:white;
+  font-weight:bold;
 }
 
 /* Float cancel and signup buttons and add an equal width */
@@ -97,16 +108,14 @@ button:hover {
     <label for="psw"><b>Password</b></label>
     <form:input type="password" placeholder="Enter Password" name="psw"  path="password"/>
     
-      <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms and Privacy</a>.</p>
+    
+    <div class="clearfix">
+	    <input type="submit" class="cancelbtn" value="Cancel"/>
+	    <input type="submit" class="signupbtn" value="Sign UP"/>
     </div>         
     
     </form:form>
-    
-    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms and Privacy</a>.</p>
-
-
   </div>
 
 

@@ -57,7 +57,7 @@ public class MainController {
 		
 		userRepository.save(user);
 		
-		return "redirect:/home";
+		return "redirect:/login";
 	}
     
     

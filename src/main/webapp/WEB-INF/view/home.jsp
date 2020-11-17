@@ -31,8 +31,8 @@
         </ul>
 
         <form class="form-inline">
-            <button class="btn btn-dark btn-success">Register</button>
-            <button class="btn btn-dark btn-success">Sign In</button>
+	    	<input type="submit" class="btn btn-dark btn-success" value="Register"/>
+	    	<input type="submit" class="btn btn-dark btn-success" value="Sign in"/>
         </form>
 
     </nav>
