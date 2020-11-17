@@ -1,4 +1,6 @@
 package com.miniproj.a4.crimems.controllers;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,8 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import com.miniproj.a4.crimems.entity.CyberCrime;
 import com.miniproj.a4.crimems.entity.Extortion;
@@ -21,6 +22,7 @@ import com.miniproj.a4.crimems.repository.FelonyRepository;
 import com.miniproj.a4.crimems.repository.MissingRepository;
 import com.miniproj.a4.crimems.repository.RobberyRepository;
 import com.miniproj.a4.crimems.repository.UserRepository;
+
 @Controller
 public class MainController {  
     @Autowired
@@ -35,12 +37,21 @@ public class MainController {
     private RobberyRepository robberyRepository;
     @Autowired
     private UserRepository userRepository;
+   
+	
 	    
     // home page
     @RequestMapping("/home")
     public String loginMessage(){
         return "home";
     }
+    
+    // admin page
+    @RequestMapping("/admin")
+    public String adminloginMessage(){
+        return "admin";
+    }
+    
     
     @GetMapping("/register")
 	public String register(Model theModel) {
@@ -154,4 +165,59 @@ public class MainController {
 		
 		return "redirect:/home";
 	}
+    
+    @GetMapping("/admin/viewCyberCrimeComplaints")
+	public String listCyberComplaints(Model theModel) {
+		
+    	List<CyberCrime> theCyberComplaints = (List<CyberCrime>) cyberCrimeRepository.findAll();
+		
+		// add the customers to the model
+		theModel.addAttribute("listCyberComplaints", theCyberComplaints);
+		
+		return "View_c";
+	}
+    
+    @GetMapping("/admin/viewExtortionComplaints")
+	public String listExtortionComplaints(Model theModel) {
+		
+    	List<Extortion> theExtortionComplaints = (List<Extortion>) extortionRepository.findAll();
+		
+		// add the customers to the model
+		theModel.addAttribute("listExtortionComplaints", theExtortionComplaints);
+		
+		return "View_e";
+	}
+    
+    @GetMapping("/admin/viewFelonyComplaints")
+	public String listFelonyComplaints(Model theModel) {
+		
+    	List<Felony> theFelonyComplaints = (List<Felony>) felonyRepository.findAll();
+		
+		// add the customers to the model
+		theModel.addAttribute("listFelonyComplaints", theFelonyComplaints);
+		
+		return "View_f";
+	}
+    
+    @GetMapping("/admin/viewRobberyComplaints")
+	public String listRobberyComplaints(Model theModel) {
+		
+    	List<Robbery> theRobberyComplaints = (List<Robbery>) robberyRepository.findAll();
+		
+		// add the customers to the model
+		theModel.addAttribute("listRobberyComplaints", theRobberyComplaints);
+		
+		return "View_r";
+	}
+    @GetMapping("/admin/viewMissingComplaints")
+   	public String listMissingComplaints(Model theModel) {
+   		
+       	List<Missing> theMissingComplaints = (List<Missing>) missingRepository.findAll();
+   		
+   		// add the customers to the model
+   		theModel.addAttribute("listMissingComplaints", theMissingComplaints);
+   		
+   		return "View_m";
+   	}
+    
 }

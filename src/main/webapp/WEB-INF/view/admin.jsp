@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-sm">
 
         <div class="logo">
-            <a href="#"><span class="bold m-r-5"><b>Mumbai Police</b></span></a>
+            <a href="#"><span class="bold m-r-5"><b>Mumbai Police(Admin Login)</b></span></a>
         </div>
 
         <ul class="hide">
@@ -35,10 +35,6 @@
         <form action="register" class="form-inline">
     <input type="submit" class="btn btn-dark btn-success" value="Register"/>
         </form>
-        <form action="admin" class="form-inline">
-        <input type="submit" class="btn btn-dark btn-success" value="Admin Login"/>
-        </form>
-
     </nav>
 
 
@@ -100,19 +96,19 @@
         </div>
         <div class="container-1">
             <div class="a">
-                <p class="grid-item"><a href="/reportCyberCrimeComplaint">File a Cyber-Crime complain</a></p>
+                <p class="grid-item"><a href="/admin/viewCyberCrimeComplaints">View CyberCrime Complaints</a></p>
             </div>
             <div class="b">
-                <p class="grid-item"><a href="/reportExtortionComplaint">File a Extortion complain</a></p>
+                <p class="grid-item"><a href="/admin/viewExtortionComplaints">View Extortion Complaints</a></p>
             </div>
             <div class="c">
-                <p class="grid-item"><a href="/reportFelonyComplaint">File a Felony complain</a></p>
+                <p class="grid-item"><a href="/admin/viewFelonyComplaints">View Felony Complaints</a></p>
             </div>
             <div class="d">
-                <p class="grid-item"><a href="/reportMissingComplaint">File a Missing complain</a></p>
+                <p class="grid-item"><a href="/admin/viewMissingComplaints">View Missing Reports</a></p>
             </div>
             <div class="e">
-                <p class="grid-item"><a href="/reportRobberyComplaint">File a Robbery complain</a></p>
+                <p class="grid-item"><a href="/admin/viewRobberyComplaints">View Robbery Complaints</a></p>
             </div>
             <div class="f">
                 <p class="grid-item">View Complains</p>
