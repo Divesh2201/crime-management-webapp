@@ -1,9 +1,11 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <html>
 
 <!-- Start -->
 
 <head>
-    <title>Welcome</title>
+    <title>Mumbai Police</title>
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="css/welcome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -30,9 +32,11 @@
             <li><a href="#Contact">Contact Us</a></li>
         </ul>
 
-        <form class="form-inline">
-	    	<input type="submit" class="btn btn-dark btn-success" value="Register"/>
-	    	<input type="submit" class="btn btn-dark btn-success" value="Sign in"/>
+        <form action="register" class="form-inline">
+    <input type="submit" class="btn btn-dark btn-success" value="Register"/>
+        </form>
+        <form action="login" class="form-inline">
+        <input type="submit" class="btn btn-dark btn-success" value="Login"/>
         </form>
 
     </nav>
