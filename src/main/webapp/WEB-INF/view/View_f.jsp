@@ -11,6 +11,8 @@
 
  	<link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="css/welcome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -42,12 +44,17 @@
 					<th>Date Of Incident</th>
 					<th>Time Of Incident</th>
 					<th>Description</th>
+					<th>Action</th>
 					
 				</tr>
 				
 				<!-- loop over and print our customers -->
 				
 				<c:forEach var="tempReport" items="${listFelonyComplaints}">
+				
+				<c:url var="deleteLink" value="/admin/deleteFelonyComplaints">
+						<c:param name="recordId" value="${tempReport.id}" />
+					</c:url>	
 				
 					<tr>
 						<td> ${tempReport.first_name} </td>
@@ -57,6 +64,10 @@
 						<td> ${tempReport.date} </td>
 						<td> ${tempReport.time} </td>
 						<td> ${tempReport.desc} </td>	
+						<td>
+							<a href="${deleteLink}"
+							   onclick="if (!(confirm('Are you sure you want to delete this record?'))) return false"><i style="color:white" class="fas fa-trash"></i></a>
+						</td>
 					</tr>
 				
 				</c:forEach>

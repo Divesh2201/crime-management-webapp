@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.miniproj.a4.crimems.entity.CyberCrime;
 import com.miniproj.a4.crimems.entity.Extortion;
@@ -52,6 +52,7 @@ public class MainController {
         return "admin";
     }
     
+  
     
     @GetMapping("/register")
 	public String register(Model theModel) {
@@ -70,6 +71,8 @@ public class MainController {
 		
 		return "redirect:/login";
 	}
+    
+    
     
     
     @GetMapping("/reportCyberCrimeComplaint")
@@ -219,5 +222,46 @@ public class MainController {
    		
    		return "View_m";
    	}
+    
+    @GetMapping("/admin/deleteCyberCrimeComplaints")
+	public String deleteCyberCrimeRecord(@RequestParam("recordId") int id) {
+    	
+				// delete the customer
+    	cyberCrimeRepository.deleteById(id);
+		return "redirect:/admin/viewCyberCrimeComplaints";
+	}
+    
+    @GetMapping("/admin/deleteMissingComplaints")
+   	public String deleteMissingRecord(@RequestParam("recordId") int id) {
+       	
+   				// delete the customer
+       	missingRepository.deleteById(id);
+   		return "redirect:/admin/viewMissingComplaints";
+   	}
+       
+    @GetMapping("/admin/deleteExtortionComplaints")
+   	public String deleteExtortionRecord(@RequestParam("recordId") int id) {
+       	
+   				// delete the customer
+       	extortionRepository.deleteById(id);
+   		return "redirect:/admin/viewExtortionComplaints";
+   	}
+    @GetMapping("/admin/deleteRobberyComplaints")
+   	public String deleteRobberyRecord(@RequestParam("recordId") int id) {
+       	
+   				// delete the customer
+       	robberyRepository.deleteById(id);
+   		return "redirect:/admin/viewRobberyComplaints";
+   	}
+    @GetMapping("/admin/deleteFelonyComplaints")
+   	public String deleteFelonyRecord(@RequestParam("recordId") int id) {
+       	
+   				// delete the customer
+       	felonyRepository.deleteById(id);
+   		return "redirect:/admin/viewFelonyComplaints";
+   	}
+       
+       
+    
     
 }
