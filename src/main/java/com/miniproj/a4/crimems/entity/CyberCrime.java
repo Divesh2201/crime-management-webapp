@@ -32,6 +32,9 @@ public class CyberCrime {
 	
 	@Column(name ="Description")
 	private String desc;
+	
+	@Column(name = "Status")
+	private int status;
 
 	public int getId() {
 		return id;
@@ -87,6 +90,15 @@ public class CyberCrime {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+
+	
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	@Override

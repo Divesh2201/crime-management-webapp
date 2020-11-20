@@ -33,6 +33,9 @@ public class Missing {
 	
 	@Column(name ="Description")
 	private String desc;
+	
+	@Column(name = "Status")
+	private int status;
 
 	public int getId() {
 		return id;
@@ -88,6 +91,15 @@ public class Missing {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+
+	
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	@Override

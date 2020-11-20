@@ -111,7 +111,7 @@
                 <p class="grid-item"><a href="/admin/viewRobberyComplaints">View Robbery Complaints</a></p>
             </div>
             <div class="f">
-                <p class="grid-item">View Complains</p>
+                <p class="grid-item"><a href="/home" >Logout</a></p>
             </div>
         </div>
     </div><br><br>

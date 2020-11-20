@@ -55,6 +55,17 @@
 				<c:url var="deleteLink" value="/admin/deleteFelonyComplaints">
 						<c:param name="recordId" value="${tempReport.id}" />
 					</c:url>	
+					
+					<c:url var="green" value="/admin/changeStatustoGreen">
+						<c:param name="changeStatusId" value="${tempReport.id}" />
+						<c:param name="changeStatusComplaintType" value="3" />
+					</c:url>	
+					
+					<c:url var="red" value="/admin/changeStatustoRed">
+						<c:param name="changeStatusId" value="${tempReport.id}" />
+						<c:param name="changeStatusComplaintType" value="3" />
+					</c:url>					
+					
 				
 					<tr>
 						<td> ${tempReport.first_name} </td>
@@ -68,6 +79,22 @@
 							<a href="${deleteLink}"
 							   onclick="if (!(confirm('Are you sure you want to delete this record?'))) return false"><i style="color:white" class="fas fa-trash"></i></a>
 						</td>
+						<c:if test="${tempReport.status == 0}">
+						<td>
+							<a href="${green}"
+							   onclick="if (!(confirm('Are you sure you want to Accept this record?'))) return false"><i style="color:green" class="far fa-check-circle"></i></a>
+						</td>
+						<td>
+							<a href="${red}"
+							   onclick="if (!(confirm('Are you sure you want to Reject this record?'))) return false"><i style="color:red" class="far fa-times-circle"></i></a>
+						</td>
+						</c:if>
+						<c:if test="${tempReport.status == 1}">
+							<td style="color:green"> Under Scrutiny</td>
+						</c:if>
+						<c:if test="${tempReport.status == 2}">
+							<td style="color:red"> Rejected</td>
+						</c:if>
 					</tr>
 				
 				</c:forEach>

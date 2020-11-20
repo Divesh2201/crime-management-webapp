@@ -1,5 +1,6 @@
 package com.miniproj.a4.crimems.controllers;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -260,8 +261,134 @@ public class MainController {
        	felonyRepository.deleteById(id);
    		return "redirect:/admin/viewFelonyComplaints";
    	}
-       
-       
     
+    @GetMapping("/showStatusForm") 
+    public String showStatusForm() {
+    	return "statusForm";
+    }
+     
+    @GetMapping("/admin/getStatus")
+    public String getStatus(@RequestParam("statusId") int id, @RequestParam("complaintType") int type, Model model) {
+    	if(type == 1) {
+    		Optional<CyberCrime> object = cyberCrimeRepository.findById(id);
+    		if(object.isPresent()) {
+    			CyberCrime cyberCrime = object.get();
+    			model.addAttribute("showCStatus", cyberCrime);
+    		}
+    	} else if(type == 2) {
+    		Optional<Extortion> object = extortionRepository.findById(id);
+    		if(object.isPresent()) {
+    			Extortion extortion = object.get();
+    			model.addAttribute("showEStatus", extortion);
+    		}
+    	} else if(type == 3) {
+    		Optional<Felony> object = felonyRepository.findById(id);
+    		if(object.isPresent()) {
+    			Felony felony = object.get();
+    			model.addAttribute("showFStatus", felony);
+    		}
+    	} else if(type == 4) {
+    		Optional<Missing> object = missingRepository.findById(id);
+    		if(object.isPresent()) {
+    			Missing missing = object.get();
+    			model.addAttribute("showMStatus", missing);
+    		}
+    	} else {
+    		Optional<Robbery> object = robberyRepository.findById(id);
+    		if(object.isPresent()) {
+    			Robbery robbery = object.get();
+    			model.addAttribute("showRStatus", robbery);
+    		}
+    	}
+    	return "showstatus";
+    }
+    @GetMapping("/admin/changeStatustoGreen")
+    public String changeStatustoGreen(@RequestParam("changeStatusId") int id, @RequestParam("changeStatusComplaintType") int type) {
+    	if(type == 1) {
+    		Optional<CyberCrime> object = cyberCrimeRepository.findById(id);
+    		if(object.isPresent()) {
+    			CyberCrime cyberCrime = object.get();
+    			cyberCrime.setStatus(1);
+    			cyberCrimeRepository.save(cyberCrime);
+    		}
+    		return "redirect:/admin/viewCyberCrimeComplaints";
+    	} else if(type == 2) {
+    		Optional<Extortion> object = extortionRepository.findById(id);
+    		if(object.isPresent()) {
+    			Extortion extortion = object.get();
+    			extortion.setStatus(1);
+    			extortionRepository.save(extortion);
+    		}
+    		return "redirect:/admin/viewExtortionComplaints";
+    	} else if(type == 3) {
+    		Optional<Felony> object = felonyRepository.findById(id);
+    		if(object.isPresent()) {
+    			Felony felony = object.get();
+    			felony.setStatus(1);
+    			felonyRepository.save(felony);
+    		}
+    		return "redirect:/admin/viewFelonyComplaints";
+    	} else if(type == 4) {
+    		Optional<Missing> object = missingRepository.findById(id);
+    		if(object.isPresent()) {
+    			Missing missing = object.get();
+    			missing.setStatus(1);
+    			missingRepository.save(missing);
+    		}
+    		return "redirect:/admin/viewMissingComplaints";
+    	} else {
+    		Optional<Robbery> object = robberyRepository.findById(id);
+    		if(object.isPresent()) {
+    			Robbery robbery = object.get();
+    			robbery.setStatus(1);
+    			robberyRepository.save(robbery);
+    		}
+    		return "redirect:/admin/viewRobberyComplaints";
+    	}
+    }
     
+    @GetMapping("/admin/changeStatustoRed")
+    public String changeStatustoRed(@RequestParam("changeStatusId") int id, @RequestParam("changeStatusComplaintType") int type) {
+    	if(type == 1) {
+    		Optional<CyberCrime> object = cyberCrimeRepository.findById(id);
+    		if(object.isPresent()) {
+    			CyberCrime cyberCrime = object.get();
+    			cyberCrime.setStatus(2);
+    			cyberCrimeRepository.save(cyberCrime);
+    		}
+    		return "redirect:/admin/viewCyberCrimeComplaints";
+    	} else if(type == 2) {
+    		Optional<Extortion> object = extortionRepository.findById(id);
+    		if(object.isPresent()) {
+    			Extortion extortion = object.get();
+    			extortion.setStatus(2);
+    			extortionRepository.save(extortion);
+    		}
+    		return "redirect:/admin/viewExtortionComplaints";
+    	} else if(type == 3) {
+    		Optional<Felony> object = felonyRepository.findById(id);
+    		if(object.isPresent()) {
+    			Felony felony = object.get();
+    			felony.setStatus(2);
+    			felonyRepository.save(felony);
+    		}
+    		return "redirect:/admin/viewFelonyComplaints";
+    	} else if(type == 4) {
+    		Optional<Missing> object = missingRepository.findById(id);
+    		if(object.isPresent()) {
+    			Missing missing = object.get();
+    			missing.setStatus(2);
+    			missingRepository.save(missing);
+    		}
+    		return "redirect:/admin/viewMissingComplaints";
+    	} else {
+    		Optional<Robbery> object = robberyRepository.findById(id);
+    		if(object.isPresent()) {
+    			Robbery robbery = object.get();
+    			robbery.setStatus(2);
+    			robberyRepository.save(robbery);
+    		}
+    		return "redirect:/admin/viewRobberyComplaints";
+    	}
+    }
 }

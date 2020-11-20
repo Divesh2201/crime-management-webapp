@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "extortion")
 public class Extortion {
@@ -36,6 +35,9 @@ public class Extortion {
 	
 	@Column(name ="Description")
 	private String desc;
+	
+	@Column(name = "Status")
+	private int status;
 
 	public int getId() {
 		return id;
@@ -99,6 +101,15 @@ public class Extortion {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+
+	
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	@Override
