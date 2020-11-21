@@ -267,7 +267,7 @@ public class MainController {
     	return "statusForm";
     }
      
-    @GetMapping("/admin/getStatus")
+    @RequestMapping("/admin/getStatus")
     public String getStatus(@RequestParam("statusId") int id, @RequestParam("complaintType") int type, Model model) {
     	if(type == 1) {
     		Optional<CyberCrime> object = cyberCrimeRepository.findById(id);
@@ -275,32 +275,40 @@ public class MainController {
     			CyberCrime cyberCrime = object.get();
     			model.addAttribute("showCStatus", cyberCrime);
     		}
+    		return "Status_c";
     	} else if(type == 2) {
     		Optional<Extortion> object = extortionRepository.findById(id);
     		if(object.isPresent()) {
     			Extortion extortion = object.get();
     			model.addAttribute("showEStatus", extortion);
     		}
+    		return "Status_e";
+
     	} else if(type == 3) {
     		Optional<Felony> object = felonyRepository.findById(id);
     		if(object.isPresent()) {
     			Felony felony = object.get();
     			model.addAttribute("showFStatus", felony);
     		}
+    		return "Status_f";
+
     	} else if(type == 4) {
     		Optional<Missing> object = missingRepository.findById(id);
     		if(object.isPresent()) {
     			Missing missing = object.get();
     			model.addAttribute("showMStatus", missing);
     		}
+    		return "Status_m";
+
     	} else {
     		Optional<Robbery> object = robberyRepository.findById(id);
     		if(object.isPresent()) {
     			Robbery robbery = object.get();
     			model.addAttribute("showRStatus", robbery);
     		}
+    		return "Status_r";
+
     	}
-    	return "showstatus";
     }
     @GetMapping("/admin/changeStatustoGreen")
     public String changeStatustoGreen(@RequestParam("changeStatusId") int id, @RequestParam("changeStatusComplaintType") int type) {

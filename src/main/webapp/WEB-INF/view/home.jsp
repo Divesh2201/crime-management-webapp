@@ -32,12 +32,16 @@
             <li><a href="#Contact">Contact Us</a></li>
         </ul>
 
-        <form action="register" class="form-inline">
-    <input type="submit" class="btn btn-dark btn-success" value="Register"/>
-        </form>
-        <form action="admin" class="form-inline">
-        <input type="submit" class="btn btn-dark btn-success" value="Admin Login"/>
-        </form>
+
+		<div class="nav-btns">
+			
+	        <form action="register" class="form-inline">
+	    		<input type="submit" class="btn btn-dark btn-success" value="Register"/>
+	        </form>
+	        <form action="admin" class="form-inline">
+	        	<input type="submit" class="btn btn-dark btn-success" value="Admin Login"/>
+	        </form>
+	    </div>
 
     </nav>
 
@@ -115,7 +119,7 @@
                 <p class="grid-item"><a href="/reportRobberyComplaint">File a Robbery complain</a></p>
             </div>
             <div class="f">
-                <p class="grid-item">View Complains</p>
+                <p class="grid-item"><a href="/showStatusForm">View Complains</a></p>
             </div>
         </div>
     </div><br><br>
@@ -144,36 +148,36 @@
                 <div class="card">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcuvuSmK0Jh-43eSPGJdfwP_tFNc12J1C8Ig&usqp=CAU" alt="IMAGE" width="250" height="250">
                     <div class="card-text">
-                        <h3>Chulbul Pandey</h3>
-                        <p style="color:grey">Commissioner</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <h3 style="text-align:center">Akhil Lokhande</h3>
+                        <p style="color:grey;text-align:center;font-weight:bold">COMMISSIONER</p>
+                        <p style="text-align:center">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
                         <button class="btn btn-light text-center full-width">Contact</button>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/DCP_Pradip_Sawant.jpg" alt="IMAGE" width="250" height="250">
                     <div class="card-text">
-                        <h3>Bajirao Singham</h3>
-                        <p style="color:grey">DCP</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <h3 style="text-align:center">Sanjay Deshmukh</h3>
+                        <p style="color:grey;text-align:center;font-weight:bold">DCP</p>
+                        <p style="text-align:center">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
                         <button class="btn btn-light text-center full-width">Contact</button>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Sanjay_Barve%2C_Indian_Police_Service%2C_Commissioner_of_Police%2C_Mumbai.jpg" alt="IMAGE" width="250" height="250">
                     <div class="card-text">
-                        <h3>Veer Sooryanshi</h3>
-                        <p style="color:grey">ACP</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <h3 style="text-align:center">Ramesh Rawat</h3>
+                        <p style="color:grey;text-align:center;font-weight:bold">ACP</p>
+                        <p style="text-align:center">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
                         <button class="btn btn-light text-center full-width">Contact</button>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://www.thehindu.com/news/cities/mumbai/rksgsv/article25592910.ece/BINARY/26BMYogendra-Pache" alt="IMAGE" width="250" height="250">
                     <div class="card-text">
-                        <h3>Vikram Rathore</h3>
-                        <p style="color:grey">Inspector</p>
-                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <h3 style="text-align:center">Rohan Pandey</h3>
+                        <p style="color:grey;text-align:center;font-weight:bold">INSPECTOR</p>
+                        <p style="text-align:center">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
                         <button class="btn btn-light text-center full-width">Contact</button>
                     </div>
                 </div>

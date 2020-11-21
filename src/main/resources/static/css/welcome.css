@@ -184,6 +184,12 @@ textarea {
     background: #ccc;
 }
 
+.nav-btns
+{
+	display:flex;
+	gap:15px;
+}
+
 
 
 
@@ -244,18 +250,20 @@ div.container-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 250px 250px;
-    grid-gap: 50px;
+    grid-gap: 70px;
     margin: 0 50px 0 50px;
 }
 
 div.container-1 p.grid-item {
     display: block;
     text-align: center;
-    background-color: #151E3F;
-    color: #f2f3d9;
+    background-color: #e1edea;
+    margin-top:-45px;
+    margin-bottom:45px;
     padding: 10px 10px;
     font-size: 25px;
     font-weight: 800;
+    
 }
 
 .container-1 .a {
@@ -282,6 +290,9 @@ div.container-1 p.grid-item {
     background: url("https://tobygutierrez.files.wordpress.com/2017/05/file_search.jpg?w=597") center/cover no-repeat;
 }
 
+.container-1 a{
+	color:#000;
+}
 /*ABOUT*/
 
 
@@ -358,8 +369,7 @@ form input {
 .btn-dark {
     background: black;
     color: #fff;
-    margin-right:16px;
-   
+       
 }
 
 .btn-blue {

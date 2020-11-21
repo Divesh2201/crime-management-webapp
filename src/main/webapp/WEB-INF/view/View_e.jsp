@@ -45,6 +45,8 @@
 					<th>Time Of Incident</th>
 					<th>Description</th>
 					<th>Action</th>
+					<th>Status</th>
+					
 					
 				</tr>
 				
@@ -90,10 +92,10 @@
 						</td>
 						</c:if>
 						<c:if test="${tempReport.status == 1}">
-							<td style="color:green"> Under Scrutiny</td>
+							<td colspan="2" style="color:green"> Under Scrutiny</td>
 						</c:if>
 						<c:if test="${tempReport.status == 2}">
-							<td style="color:red"> Rejected</td>
+							<td colspan="2" style="color:red"> Rejected</td>
 						</c:if>
 					</tr>
 				
