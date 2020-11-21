@@ -1,4 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 
 <!DOCTYPE html>
 <html>
@@ -178,13 +180,15 @@ input:focus {
 
 	<div class="login">
 		<h1>Login</h1>
-	    <form method="post">
-	    	<input type="text" name="u" placeholder="Username" required="required" />
-	        <input type="password" name="p" placeholder="Password" required="required" />
-	        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
-	    </form>
+	    <form:form action="/admin" modelAttribute="adminobj" method="post">
+                <form:input type="text" placeholder="Admin Username" path="username"/>
+                <form:input type="password" placeholder="Admin Password" path="password"/>
+                <input type="submit" value="Let Me In" />
+            </form:form>
 	</div>
-
+<p>
+			<a href="${pageContext.request.contextPath}/home">Back to Home</a>
+		</p>
 </body>
 </html>
 

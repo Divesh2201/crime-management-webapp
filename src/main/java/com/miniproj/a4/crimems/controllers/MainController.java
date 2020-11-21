@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.miniproj.a4.crimems.entity.Admin;
 import com.miniproj.a4.crimems.entity.CyberCrime;
 import com.miniproj.a4.crimems.entity.Extortion;
 import com.miniproj.a4.crimems.entity.Felony;
@@ -47,13 +48,26 @@ public class MainController {
         return "home";
     }
     
-    // admin page
-    @RequestMapping("/admin")
-    public String adminloginMessage(){
-        return "admin";
+    @RequestMapping("/welcome")
+    public String adminHome() {
+    	return "admin";
     }
     
-  
+    @GetMapping("/admin/login") 
+    public String loginForAdmin(Model model) {
+    	Admin admin = new Admin();
+    	model.addAttribute("adminobj", admin);
+    	return "login";
+    }
+    
+    @PostMapping("/admin") 
+    public String validateAdmin(@ModelAttribute("adminobj") Admin admin) {
+    	if(admin.getUsername().contentEquals("admin") && admin.getPassword().contentEquals("admin")) {
+    		return "admin";
+    	} else {
+    		return "login";
+    	}
+    }
     
     @GetMapping("/register")
 	public String register(Model theModel) {
@@ -70,7 +84,7 @@ public class MainController {
 		
 		userRepository.save(user);
 		
-		return "redirect:/login";
+		return "home";
 	}
     
     

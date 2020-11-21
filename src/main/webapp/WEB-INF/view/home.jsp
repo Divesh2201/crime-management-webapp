@@ -38,7 +38,7 @@
 	        <form action="register" class="form-inline">
 	    		<input type="submit" class="btn btn-dark btn-success" value="Register"/>
 	        </form>
-	        <form action="admin" class="form-inline">
+	        <form action="/admin/login" class="form-inline">
 	        	<input type="submit" class="btn btn-dark btn-success" value="Admin Login"/>
 	        </form>
 	    </div>

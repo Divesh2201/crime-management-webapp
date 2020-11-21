@@ -104,7 +104,9 @@
 		</div>
 	
 	</div>
-	
+	<p>
+			<a href="/welcome">Back to Home</a>
+		</p>
 
 </body>
 
