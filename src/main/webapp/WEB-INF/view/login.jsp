@@ -174,6 +174,7 @@ input:focus {
     box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4), 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
+
 	
 </style>
 <body>
@@ -187,7 +188,7 @@ input:focus {
             </form:form>
 	</div>
 <p>
-			<a href="${pageContext.request.contextPath}/home">Back to Home</a>
+			<a style="color:white;font-size:25px;font-weight:bold"  href="${pageContext.request.contextPath}/home">Back to Home</a>
 		</p>
 </body>
 </html>

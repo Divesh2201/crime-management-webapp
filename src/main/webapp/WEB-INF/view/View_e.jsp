@@ -45,7 +45,7 @@
 					<th>Time Of Incident</th>
 					<th>Description</th>
 					<th>Action</th>
-					<th>Status</th>
+					<th colspan="2">Status</th>
 					
 					
 				</tr>
