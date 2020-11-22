@@ -15,14 +15,20 @@
 
 
 <body>
-
+<head>
+        <script type="text/javascript">
+            function ack(){
+                alert("Your Complaint Acknowledgement Number is 5")
+            }
+        </script>
+    </head>
     <div class="section section-white" id="Contact">
         <div class="container">
             <div class="section-heading">
                 <h3 align="center" style="font-size:40px"><b><u>CyberCrime Record</u></b></h3><br>
             </div>
             <div class="para">Fill in all the details precisely.<br>We appreciate your co-operation.</div>
-            <form:form action="saveCyberCrime" modelAttribute="cyberCrime" method="post">
+            <form:form action="saveCyberCrime" onsubmit="ack()" modelAttribute="cyberCrime" method="post">
             <form:hidden path="id" />
                 <form:input type="text" placeholder="First name" path="first_name"/>
                 <form:input type="text" placeholder="Last name" path="last_name"/>
