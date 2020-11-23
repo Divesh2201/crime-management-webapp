@@ -6,5 +6,5 @@ Java Mini Project Sem 3
 3. Run class CrimeManagementSystemApplication as normal java class
 4. Goto localhost:8080/<endpt>
 
-#### Still in Development :smile:	
+#### Completed Development :smile: 	
 #### Made with :blue_heart:	by Divesh, Kush, Marmik
