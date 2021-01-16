@@ -1,5 +1,5 @@
 # crime-management-webapp
-Java Mini Project Sem 3 
+Mini Project Sem 4 
 ### To run the web app on your local machine:
 1. Clone the repository
 2. Open in any favourite ide
